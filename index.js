@@ -86,7 +86,11 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  
+  constructor(atr){
+    this.name = atr.name;
+    this.age = atr.age;
+    this.location = atr.location;
+  }
 }
 
 /*
@@ -104,6 +108,14 @@ class Lambdasian {
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor {
+  constructor(atr){
+    this.name = atr.name;
+    this.age = atr.age;
+    this.location = atr.location;
+    this.specialty = atr.specialty;
+    this.favLanguage = atr.favLanguage;
+    this.catchPhrase = atr.catchPhrase;
+  }
 
 }
 /*
@@ -122,7 +134,14 @@ class Instructor {
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 class Student {
-   
+  constructor(atr){
+    this.name = atr.name;
+    this.age = atr.age;
+    this.location = atr.location;
+    this.previousBackground = atr.previousBackground;
+    this.className = atr.className;
+    this.favSubjects = atr.favSubjects;
+  }
 }
 
 /*
@@ -139,7 +158,16 @@ class Student {
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 class ProjectManager {
-   
+  constructor(atr){
+    this.name = atr.name;
+    this.age = atr.age;
+    this.location = atr.location;
+    this.specialty = atr.specialty;
+    this.favLanguage = atr.favLanguage;
+    this.catchPhrase = atr.catchPhrase;
+    this.gradClassName = atr.gradClassName;
+    this.favInstructor = atr.favInstructor;
+  }
 }
 /*
   STRETCH PROBLEM (no tests!)
