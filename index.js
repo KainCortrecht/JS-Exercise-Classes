@@ -47,6 +47,17 @@ class Person {
     this.age = age;
     this.stomach = [];
   }
+  eat(someFood){
+    if(this.stomach.length < 10){
+      this.stomach.push(someFood);
+    }
+  }
+  poop(){
+    this.stomach = [];
+  }
+  toString(){
+    return `${this.name}, ${this.age}`;
+  }
 }
 
 /*
@@ -70,7 +81,20 @@ class Car {
     this.tank = 0;
     this.odometer = 0;
   }
-  
+  fill(gallons){
+    this.tank = this.tank + gallons;
+ }
+ drive(distance){
+  const driveMiles = this.tank * this.milesPerGallon;
+  if(distance <= driveMiles){
+    this.odometer = this.odometer + distance;
+    this.tank = this.tank - (distance / this.milesPerGallon);
+  }else{
+    this.odometer = this.odometer + driveMiles;
+    this.tank = 0;
+    return `I ran out of fuel at ${this.odometer} miles!`;
+  }
+ }
 }
 
 /*
@@ -90,6 +114,9 @@ class Lambdasian {
     this.name = atr.name;
     this.age = atr.age;
     this.location = atr.location;
+  }
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${this.location}`;
   }
 }
 
